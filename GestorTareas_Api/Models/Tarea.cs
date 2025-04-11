@@ -10,7 +10,7 @@
         public DateTime? Fecha_Entrega { get; set; }
         public string Estado { get; set; }
         //nuevo cambio
-
+        public int Intento_1 { get; set; }
         public Usuario Usuario { get; set; }
         public ICollection<TareaCategoria> TareasCategorias { get; set; }
     }
