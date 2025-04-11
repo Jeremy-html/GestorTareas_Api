@@ -77,7 +77,7 @@ namespace GestorTareas_Api.Controllers
             return NoContent();
         }
 
-        // DELETE: api/Tareas/5
+        // DELETE: api/Tareas/
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteTarea(int id)
         {
