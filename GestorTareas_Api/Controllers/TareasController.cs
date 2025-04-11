@@ -23,7 +23,7 @@ namespace GestorTareas_Api.Controllers
             return await _context.Tareas.ToListAsync();
         }
 
-        // GET: api/Tareas/5
+        // GET: api/Tareas/5 jaj
         [HttpGet("{id}")]
         public async Task<ActionResult<Tarea>> GetTarea(int id)
         {
