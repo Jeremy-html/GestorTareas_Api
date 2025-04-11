@@ -9,6 +9,7 @@
         public DateTime Fecha_Creacion { get; set; }
         public DateTime? Fecha_Entrega { get; set; }
         public string Estado { get; set; }
+        //nuevo cambio
 
         public Usuario Usuario { get; set; }
         public ICollection<TareaCategoria> TareasCategorias { get; set; }
