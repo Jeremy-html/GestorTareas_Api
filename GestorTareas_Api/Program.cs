@@ -11,7 +11,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("ConexionSql")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("GestorTareasDb")));
 
 var app = builder.Build();
 
