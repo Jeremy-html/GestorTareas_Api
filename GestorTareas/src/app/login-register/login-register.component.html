@@ -1,0 +1,40 @@
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <!-- Email input -->
+  <div class="wrap-input100 validate-input">
+    <input class="input100" type="email" formControlName="email" placeholder="Email">
+    <span class="focus-input100"></span>
+    <span class="symbol-input100">
+      <i class="fa fa-envelope" aria-hidden="true"></i>
+    </span>
+    <!-- Mostrar error si el campo no es válido -->
+    <div *ngIf="loginForm.get('email').invalid && loginForm.get('email').touched">
+      <small class="text-danger" *ngIf="loginForm.get('email').hasError('required')">Email is required</small>
+      <small class="text-danger" *ngIf="loginForm.get('email').hasError('email')">Please enter a valid email</small>
+    </div>
+  </div>
+
+  <!-- Password input -->
+  <div class="wrap-input100 validate-input">
+    <input class="input100" type="password" formControlName="pass" placeholder="Password">
+    <span class="focus-input100"></span>
+    <span class="symbol-input100">
+      <i class="fa fa-lock" aria-hidden="true"></i>
+    </span>
+    <!-- Mostrar error si el campo no es válido -->
+    <div *ngIf="loginForm.get('pass').invalid && loginForm.get('pass').touched">
+      <small class="text-danger" *ngIf="loginForm.get('pass').hasError('required')">Password is required</small>
+      <small class="text-danger" *ngIf="loginForm.get('pass').hasError('minlength')">Password must be at least 6 characters</small>
+    </div>
+  </div>
+
+  <!-- Login button -->
+  <div class="container-login100-form-btn">
+    <button type="submit" class="login100-form-btn" [disabled]="loginForm.invalid">
+      Login
+    </button>
+  </div>
+</form>
+
+
+
+

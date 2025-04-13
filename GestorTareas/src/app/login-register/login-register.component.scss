@@ -1,0 +1,68 @@
+// Variables de colores y otros valores
+$primary-color: #007bff;
+$hover-color: #0056b3;
+$error-color: #f44336;
+$form-bg-color: #fff;
+$input-bg-color: #f9f9f9;
+
+// Estilos generales para el formulario de login
+.login-form {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 2rem;
+  background-color: $form-bg-color;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+  .form-group {
+    margin-bottom: 1.5rem;
+
+    label {
+      font-size: 1.1rem;
+      color: #333;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 0.75rem;
+      font-size: 1rem;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      background-color: $input-bg-color;
+      transition: border-color 0.3s;
+
+      &:focus {
+        border-color: $primary-color;
+        background-color: #fff;
+      }
+    }
+
+    .text-danger {
+      font-size: 0.9rem;
+      color: $error-color;
+      margin-top: 0.25rem;
+    }
+  }
+
+  .form-btn {
+    .btn {
+      width: 100%;
+      padding: 1rem;
+      font-size: 1.2rem;
+      border-radius: 10px;
+      background-color: $primary-color;
+      color: #fff;
+      border: none;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: $hover-color;
+      }
+
+      &:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+      }
+    }
+  }
+}

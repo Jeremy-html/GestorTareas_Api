@@ -110,8 +110,8 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
     private monthFormatter = new Intl.DateTimeFormat('en', { month: 'long' });
 
     public toggleTheme() {
-      this.darkTheme = !this.darkTheme;
-      this.inputType = this.darkTheme ? 'material' : 'fluent';
+    this.darkTheme = !this.darkTheme;
+    this.inputType = this.darkTheme ? 'material' : 'fluent';
     }
 
     // TODO Make Pipe from the filterTasks function
