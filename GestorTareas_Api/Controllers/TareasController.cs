@@ -1,10 +1,12 @@
 ﻿using GestorTareas_Api.Data;
 using GestorTareas_Api.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace GestorTareas_Api.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class TareasController : ControllerBase

@@ -1,12 +1,14 @@
 ﻿using GestorTareas_Api.Data;
 using GestorTareas_Api.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace GestorTareas_Api.Controllers
 {
-    [Route("api/[controller]")]
+    [Authorize] // <-- Esto obliga a que el usuario tenga un JWT válido
     [ApiController]
+    [Route("api/[controller]")]
     public class TareaCategoriaController : ControllerBase
     {
         private readonly AppDbContext _context;
